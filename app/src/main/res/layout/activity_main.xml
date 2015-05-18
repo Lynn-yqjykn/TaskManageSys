@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/ll_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/home_banner"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_search_edit"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/imbtn_actionbar_function1"
+            android:background="@drawable/home_search">
+
+
+            <ImageButton
+                android:id="@+id/imgbtn_home_search"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/home_nav_icon_search"
+                />
+
+
+            <EditText
+                android:id="@+id/tv_actionbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imgbtn_home_search"
+                android:background="@drawable/home_search"
+                android:hint="请输入任务名"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:shadowColor="#b7b7bb"
+                android:singleLine="true"
+                android:textColor="#b7b7bb"
+                android:textSize="15dp"
+                />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/imbtn_actionbar_function1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_home_nav_position"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/lv_task_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>
