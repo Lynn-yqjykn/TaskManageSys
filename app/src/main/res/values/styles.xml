@@ -5,5 +5,13 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="topbar_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="@android:textSize">@dimen/top_title_size</item>
+    </style>
 
 </resources>

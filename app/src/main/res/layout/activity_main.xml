@@ -10,7 +10,7 @@
         android:id="@+id/ll_actionbar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@drawable/home_banner"
+        android:background="@drawable/top_bar"
         android:focusable="true"
         android:focusableInTouchMode="true">
 
@@ -19,9 +19,8 @@
             android:layout_width="280dp"
             android:layout_height="35dp"
             android:layout_centerInParent="true"
-
             android:layout_marginRight="12dp"
-            android:layout_toLeftOf="@+id/imbtn_actionbar_function1"
+            android:layout_toLeftOf="@+id/imgbtn_add_task"
             android:background="@drawable/home_search">
 
 
@@ -38,7 +37,6 @@
                 android:id="@+id/tv_actionbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/imgbtn_home_search"
                 android:background="@drawable/home_search"
@@ -54,7 +52,7 @@
         </RelativeLayout>
 
         <ImageButton
-            android:id="@+id/imbtn_actionbar_function1"
+            android:id="@+id/imgbtn_add_task"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
@@ -66,6 +64,9 @@
     </RelativeLayout>
     <ListView
         android:id="@+id/lv_task_list"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 </LinearLayout>
