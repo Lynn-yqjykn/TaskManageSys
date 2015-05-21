@@ -1,6 +1,7 @@
 package adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,22 +80,22 @@ public class TaskAdapter extends BaseAdapter {
         Log.v("a", taskArrayList.get(position).getName());
         holder.tvMessageDetail.setText(taskArrayList.get(position).getDescribe());
         holder.tvMessageTitle.setText(taskArrayList.get(position).getName());
-//        switch (taskArrayList.get(position).getTaskweigh()) {
-//            case i_and_e_weight:
-//                holder.tvMessageTitle.setTextColor(context.getResources().getColor(R.color.red));
-//                break;
-//            case i_and_ne_weight:
-//                holder.tvMessageTitle.setTextColor(context.getResources().getColor(R.color.orange));
-//                break;
-//            case ni_and_e_weight:
-//                holder.tvMessageTitle.setTextColor(context.getResources().getColor(R.color.green));
-//                break;
-//            case ni_and_ne_weight:
-//                holder.tvMessageTitle.setTextColor(context.getResources().getColor(R.color.blue));
-//                break;
-//            default:
-//                break;
-//        }
+        switch (taskArrayList.get(position).getTaskweigh()) {
+            case i_and_e_weight:
+                holder.tvMessageTitle.setTextColor(Color.rgb(200, 20, 60));
+                break;
+            case i_and_ne_weight:
+                holder.tvMessageTitle.setTextColor(Color.rgb(75, 0, 130));
+                break;
+            case ni_and_e_weight:
+                holder.tvMessageTitle.setTextColor(Color.rgb(255, 255, 255));
+                break;
+            case ni_and_ne_weight:
+                holder.tvMessageTitle.setTextColor(Color.rgb(0, 0, 0));
+                break;
+            default:
+                break;
+        }
 
         holder.tvMessageTime.setText(taskArrayList.get(position ).getYear() + "/"
                                                  + taskArrayList.get(position ).getMonth() + "/"
