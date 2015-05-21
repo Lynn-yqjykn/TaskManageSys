@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_background"
+                android:gravity="top">
+
+    <RelativeLayout
+        android:id="@+id/edit_top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@drawable/top_bar">
+
+        <TextView
+            android:id="@+id/tv_title_topbar"
+            style="@style/topbar_text"
+            android:text="@string/task_edit_title"
+            android:textSize="25dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn_take_photo"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/take_photo_button2"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_top">
+
+
+        <EditText
+            android:id="@+id/et_task_name"
+            android:layout_width="400dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/setting_edit"
+            android:ems="10"
+            android:hint="请输入您的任务名称"
+            android:singleLine="true">
+
+            <requestFocus/>
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_title">
+
+        <EditText
+            android:id="@+id/et_task_details"
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/setting_edit"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="请输入您的任务的详细信息"
+            android:paddingBottom="1dip"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_content">
+
+        <Spinner
+            android:id="@+id/sp_type_choose"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+        </Spinner>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_weigh_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_content"
+        android:layout_toRightOf="@+id/edit_choose">
+
+
+        <Spinner
+            android:id="@+id/sp_type_weigh_choose"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+        </Spinner>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_edit_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_choose"
+        >
+
+        <ImageView
+            android:id="@+id/iv_show_photo"
+            android:layout_width="400dp"
+            android:layout_height="170dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/nothing"
+            android:scaleType="centerCrop"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_save_task"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/my_feedback_button"
+        android:text="保存"
+        android:textColor="#FFFFFFFF"/>
+
+</RelativeLayout>
